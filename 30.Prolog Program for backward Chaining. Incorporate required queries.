@@ -1,0 +1,21 @@
+?- consult('ancestor.pl').
+true.
+
+?- ancestor(john, bob).
+true.
+
+?- ancestor(mary, bob).
+true.
+
+?- ancestor(alice, bob).
+true.
+
+?- ancestor(X, bob).
+X = alice ;
+X = mary ;
+X = john.
+
+?- ancestor(john, Y).
+Y = mary ;
+Y = alice ;
+Y = bob.
